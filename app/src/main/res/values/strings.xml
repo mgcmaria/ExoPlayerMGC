@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ExoPlayer</string>
+    <string name="imagen">imagen</string>
+    <string name="video_en_streaming">Reproduciendo desde url:</string>
+    <string name="v_deos_en_streaming">Vídeos en Streaming</string>
+    <string name="introduce">Introduce la url del vídeo que quieras ver</string>
+    <string name="http">http//....</string>
+    <string name="ver">VER</string>
+    <string name="reproducir">Reproduciendo vídeo</string>
+    <string name="salir">salir</string>
+</resources>

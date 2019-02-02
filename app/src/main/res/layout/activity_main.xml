@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+   <ImageView
+       style="@style/entrada_imagen"
+       android:id="@+id/imageView"
+       android:scaleType="fitXY"
+       app:srcCompat="@mipmap/fondo3"/>
+
+   <TextView
+       style="@style/entrada_text_titulo"
+       android:id="@+id/titulo_reproductor"
+       android:text="@string/reproducir"
+       android:textAlignment="center"
+       android:gravity="center"/>
+
+   <ImageButton
+       android:id="@+id/imageButton"
+       android:layout_width="60dp"
+       android:layout_height="50dp"
+       android:background="@color/ninguno"
+       android:onClick="volver"
+       app:srcCompat="@mipmap/volver"
+       android:contentDescription="@string/imagen"/>
+
+   <com.google.android.exoplayer2.ui.PlayerView
+       android:id="@+id/player_view"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_centerInParent="true"
+       android:layout_below="@id/titulo_reproductor"
+       app:controller_layout_id="@layout/exo_playback_control_view"
+       app:resize_mode="fill"
+       >
+   </com.google.android.exoplayer2.ui.PlayerView>
+
+    <!--
+
+   <TextView
+       android:id="@+id/textView"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/video_en_streaming"
+       android:layout_centerHorizontal="true"
+       android:layout_below="@id/titulo_reproductor"
+       android:layout_marginTop="15dp"
+       android:textSize="25sp"
+       android:textColor="@color/amarillo"
+       android:textStyle="bold"/>
+
+   <TextView
+       android:id="@+id/textView_valor_url"
+       android:layout_width="320dp"
+       android:layout_height="60dp"
+       android:background="@color/colorPrimaryGris"
+       android:layout_centerHorizontal="true"
+       android:layout_below="@id/textView"
+       android:layout_marginTop="15dp"
+       android:textSize="12sp"
+       android:textColor="@color/colorPrimaryDark"
+       android:textStyle="italic"
+       android:padding="8dp"
+       android:textAlignment="center"/>
+       -->
+
+</RelativeLayout>

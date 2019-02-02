@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom"
+    android:layoutDirection="ltr"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    tools:targetApi="28"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:orientation="horizontal">
+
+        <ImageButton android:id="@id/exo_repeat_toggle"
+            style="@style/exo_player_button"
+            android:src="@mipmap/repetir"/>
+
+        <ImageButton android:id="@id/exo_prev"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:src="@mipmap/empezar"
+            android:contentDescription="@string/imagen"/>
+
+        <ImageButton android:id="@id/exo_rew"
+            style="@style/exo_player_button"
+            android:layout_marginStart="20dp"
+            android:src="@mipmap/rebobinado"/>
+
+        <ImageButton android:id="@id/exo_shuffle"
+            style="@style/exo_player_button"
+            android:src="@mipmap/shuffle"/>
+
+        <ImageButton android:id="@id/exo_play"
+            style="@style/exo_player_button"
+            android:src="@mipmap/play"/>
+
+        <ImageButton android:id="@id/exo_pause"
+            style="@style/exo_player_button"
+            android:src="@mipmap/pausa"/>
+
+        <ImageButton android:id="@id/exo_ffwd"
+            style="@style/exo_player_button"
+            android:src="@mipmap/adelantar"/>
+
+        <ImageButton android:id="@id/exo_next"
+            style="@style/exo_player_button"
+            android:src="@mipmap/end"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView android:id="@id/exo_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <com.google.android.exoplayer2.ui.DefaultTimeBar
+            android:id="@id/exo_progress"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="26dp"
+            app:ad_marker_color="@color/colorPrimaryDark"
+            app:buffered_color="@color/colorPrimaryGris"
+            app:played_color="@color/colorPrimaryDark"
+            app:played_ad_marker_color="@color/colorPrimaryDark"
+            app:unplayed_color="@color/colorPrimary"
+            />
+
+        <TextView android:id="@id/exo_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <!--
+        <FrameLayout
+            android:id="@+id/exo_fullscreen_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="right">
+
+            <ImageView
+                android:id="@+id/exo_fullscreen_icon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/pantalla_completa"
+                android:onClick="pantalla_completa"
+                />
+
+        </FrameLayout>
+        -->
+
+    </LinearLayout>
+
+</LinearLayout>

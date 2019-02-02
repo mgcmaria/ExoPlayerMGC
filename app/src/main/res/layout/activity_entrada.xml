@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EntradaActivity">
+
+    <ImageView
+        style="@style/entrada_imagen"
+        android:id="@+id/imageView"
+        android:scaleType="fitXY"
+        app:srcCompat="@mipmap/fondo3"/>
+
+    <TextView
+        style="@style/entrada_text_titulo"
+        android:id="@+id/titulo_entrada"
+        android:text="@string/v_deos_en_streaming"
+        android:gravity="center"/>
+
+    <TextView
+        style="@style/entrada_text_introduce"
+        android:id="@+id/texto"
+        android:text="@string/introduce"
+        android:layout_below="@id/titulo_entrada"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/editText_url"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textUri"
+        android:hint="@string/http"
+        android:layout_below="@id/texto"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimaryGris">
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/editText_url"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/boton"
+        android:drawableBottom="@mipmap/ojo"
+        android:onClick="pasarActivity" />
+
+    <Button
+        android:id="@+id/button_salir"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_below="@id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/boton"
+        android:text="@string/salir"
+        android:onClick="salir"
+        />
+
+</RelativeLayout>
